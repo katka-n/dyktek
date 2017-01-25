@@ -1,6 +1,6 @@
 <?php
 
-function pol_month($posts)
+function polMonth($posts)
 {
     $month = $posts['created_at'];
     $month_sub = substr($month, 5, 2);
@@ -15,7 +15,7 @@ function pol_month($posts)
     return $pol_month;
 }
 
-function pol_day($posts)
+function polDay($posts)
 {
     $month = $posts['created_at'];
     $new_day = substr($month, 8, 2);
@@ -27,7 +27,7 @@ function year($posts)
     return $year = substr($posts['created_at'], 0, 4);
 }
 
-function post_truncate($posts)
+function postTruncate($posts)
 {
     $data = $posts['excerpt'];
     if (strlen($data) > 200) {
@@ -35,7 +35,7 @@ function post_truncate($posts)
     }
 }
 
-function category_name($posts, $categories)
+function categoryName($posts, $categories)
 {
 
     $entry_category = $posts['category_id'];
@@ -47,7 +47,7 @@ function category_name($posts, $categories)
     }
 }
 
-function iframe_search($posts)
+function iframeSearch($posts)
 {
     $data = ($posts[0]['body']);
     preg_match('#(?:<iframe[^>]*)(?:(?:/>)|(?:>.*?</iframe>))#i', $data, $matches);
@@ -55,4 +55,20 @@ function iframe_search($posts)
 //    var_dump($matches);
     $movie = $matches[0];
     return $movie;
+}
+
+
+function fullMonth($postsByDates)
+{
+    $date = $postsByDates['created_at'];
+//    $month_sub = substr($date, 5, 2);
+//
+//    $months_arr = array('01' => 'STYCZEŃ', '02' => 'LUTY', '03' => 'MARZEC',
+//        '04' => 'KWIECIEŃ', '05' => 'MAJ', '06' => 'CZERWIEC',
+//        '07' => 'LIPIEC', '08' => 'SIERPIEŃ', '09' => 'WRZESIEŃ',
+//        '10' => 'PAŹDZIERNIK', '11' => 'LISTOPAD', '12' => 'GRUDZIEŃ');
+//
+//    $pol_month = $months_arr[$month_sub];
+
+    return $date;
 }

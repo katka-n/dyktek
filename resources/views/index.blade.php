@@ -22,8 +22,8 @@
                         <div class="col-lg-4 col-md-12 col-sm-12 date-box wow fadeInLeft" data-wow-delay="0.2s">
                             <div>
                                 <div class="badge">
-                                    {!! pol_day($posts[$i]) !!}
-                                    <span>{!! pol_month($posts[$i]) !!}</span>
+                                    {!! polDay($posts[$i]) !!}
+                                    <span>{!! polMonth($posts[$i]) !!}</span>
                                     <strong>6 <img src="img/page1_icon4.png" alt=""></strong>
                                 </div>
                                 <div class="extra-wrap">
@@ -80,7 +80,7 @@
                                 <div class="caption">
                                     <a href="/blog/{{$post['id']}}" class="title">{{$post['title']}}</a>
                                     <br><br>
-                                    <p>{!! post_truncate($post) !!}</p>
+                                    <p>{!! postTruncate($post) !!}</p>
                                     <a href="/blog/{{$post['id']}}" class="btn-default btn1">Więcej...</a>
                                 </div>
                             </div>
@@ -117,6 +117,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection

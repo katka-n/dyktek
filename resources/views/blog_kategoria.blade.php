@@ -11,15 +11,15 @@
                         <div class="extra-wrap">
                             @foreach($posts as $post)
                                 <div class="badge">
-                                    {!! pol_day($post) !!}
-                                    <span>{!! pol_month($post) !!}</span>
+                                    {!! polDay($post) !!}
+                                    <span>{!! polMonth($post) !!}</span>
                                     <div class="badge_small">
                                         <strong>6 <img src="/img/page2_icon1.png" alt=""></strong>
                                     </div>
                                 </div>
                                 <a href="/blog/{{$post['id']}}" class="lnk">{{$post['title']}}</a>
                                 <p class="post">Wysłane {{$post['created_at']}}, w
-                                    kategorii {!! category_name($post, $categories) !!}
+                                    kategorii {!! categoryName($post, $categories) !!}
                                     <br></p>
                                 <div class="thumbnail">
                                     <div class="caption">

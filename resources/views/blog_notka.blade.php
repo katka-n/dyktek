@@ -11,14 +11,14 @@
                         <div class="extra-wrap">
                             <div>
                                 <div class="badge">
-                                    {!! pol_day($posts) !!}
-                                    <span>{!! pol_month($posts) !!}</span>
+                                    {!! polDay($posts) !!}
+                                    <span>{!! polMonth($posts) !!}</span>
                                         <strong>6 <img src="/img/page2_icon1.png" alt=""></strong>
                                     </div>
                                 </div>
 
                             <a href="/blog/{{$posts['id']}}" class="lnk">{{$posts['title']}}</a>
-                            <p class="post">Wysłane {{$posts['created_at']}}, w kategorii {!! category_name($posts, $categories) !!}
+                            <p class="post">Wysłane {{$posts['created_at']}}, w kategorii {!! categoryName($posts, $categories) !!}
                                 <br></p>
                             <div class="thumbnail">
                                 <div class="caption">

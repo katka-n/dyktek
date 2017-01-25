@@ -44,7 +44,16 @@ class PostController extends Controller
     {
         $posts = Post::orderBy('id', 'desc')->paginate(2);
         $categories = Categories::all();
-        return view('blog', ['posts' => $posts, 'categories' => $categories]);
+
+        $postsByDates = Post::orderBy('created_at', 'desc')->get();
+
+
+
+        return view('blog', ['posts' => $posts, 'categories' => $categories, 'postsByDates' => $postsByDates]);
+
+
+
+
     }
 
     //wyswietlanie notek po kategorii lub po id

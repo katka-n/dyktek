@@ -33,7 +33,6 @@
 <script type="text/javascript" src="{{ URL::asset('js/modal.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/bootstrap-filestyle.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/wow/wow.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('search/search.js') }}"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
